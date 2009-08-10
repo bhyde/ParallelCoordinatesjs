@@ -10,25 +10,6 @@ Installation
 ======
 See the example.html
 
-Experiment
-======
-<script type="text/javascript">
-(function (){
-  function injectScript(url){
-    var headID = document.getElementsByTagName("head")[0];         
-    var newScript = document.createElement('script');
-    newScript.type = 'text/javascript';
-    newScript.src = url;
-    headID.appendChild(newScript);};
-
-  injectScript("http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.js");
-
-})();
-
-alert("hi there")
-
-</script>
-
 Authors
 ======
 Ben Hyde <bhyde@pobox.com>

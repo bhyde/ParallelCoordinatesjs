@@ -1,0 +1,31 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<html><head><title>Example for Parallel Coordinates</title>
+
+<script type="text/javascript"
+        src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.js"></script
+<script type="text/javascript"
+        src="processing.js"></script>
+<script type="text/javascript"
+        src="ParallelCoordinates.js"></script>
+<script type="text/javascript">
+
+// Render our example of Parallel Coordinates
+function drawChart (canvas){
+  var pc = ParallelCoordinates(canvas);
+  var data = [[2,2,2,2],
+              [2,3,3,4,{penWidth:3, color:"rgba(0,255,0,1)"}],
+              [5,4,4,4]];
+  pc.background("rgba(245,245,245,1)");
+  pc.dimensions(4);
+  pc.addPoints(data);
+  pc.draw();
+}
+
+// Startup Event handler
+function uponReady ($){ drawChart($('#example').get(0));}
+
+// Wire up the startup trigger.
+jQuery(function($){uponReady($)});
+
+</script></head>
+<body><canvas id="example"></canvas></body> </html>
